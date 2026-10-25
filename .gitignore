@@ -1,0 +1,23 @@
+# --- Obsidian ---
+# 工作区布局/窗口状态，每台机器不同，不纳入版本管理
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace
+.obsidian/cache
+.obsidian/plugins/*/data.json
+.trash/
+
+# --- 系统 / 编辑器 ---
+Thumbs.db
+desktop.ini
+.DS_Store
+*~
+~$*
+.idea/
+.vscode/
+*.swp
+
+# --- 临时 / 导出 ---
+*.tmp
+*.bak
+99_附件/.tmp/
