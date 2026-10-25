@@ -21,3 +21,11 @@ desktop.ini
 *.tmp
 *.bak
 99_附件/.tmp/
+# sed -i 在 Git Bash 下产生的随机后缀临时文件
+sed[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]
+
+# --- 本地工具状态 ---
+.workbuddy-ai/
+
+# Obsidian 未命名的空占位文件
+未命名*
