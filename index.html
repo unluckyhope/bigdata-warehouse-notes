@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>大数据数仓学习库</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+  <meta name="description" content="大数据数仓学习笔记：Hive / Spark / Flink / OLAP / 湖仓 / 数据工程 / Data Agent">
+  <meta name="theme-color" content="#3f7ad6">
+  <link rel="stylesheet" href="assets/docsify/vue.css">
+  <style>
+    :root {
+      --base-font-size: 16px;
+      --content-max-width: 900px;
+      --sidebar-width: 300px;
+    }
+    body { -webkit-font-smoothing: antialiased; }
+    .markdown-section {
+      font-size: 16px;
+      line-height: 1.8;
+      padding: 24px 20px 80px;
+    }
+    .markdown-section h1 { font-size: 1.7em; margin-top: 0.4em; }
+    .markdown-section h2 { font-size: 1.35em; border-bottom: 1px solid #eaecef; padding-bottom: .3em; margin-top: 1.8em; }
+    .markdown-section h3 { font-size: 1.15em; margin-top: 1.6em; }
+    .markdown-section p, .markdown-section li { line-height: 1.85; }
+    /* 宽表格在手机上横向滚动，不撑破页面 */
+    .markdown-section table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-collapse: collapse;
+    }
+    .markdown-section table th, .markdown-section table td { white-space: nowrap; }
+    .markdown-section pre { border-radius: 8px; }
+    .markdown-section pre > code { font-size: 13.5px; line-height: 1.6; }
+    .markdown-section code { font-size: 0.9em; }
+    /* 引用块（callout 会退化成普通引用，给点视觉区分） */
+    .markdown-section blockquote {
+      border-left: 4px solid var(--theme-color, #3f7ad6);
+      background: rgba(63, 122, 214, .06);
+      padding: 10px 16px;
+      border-radius: 0 6px 6px 0;
+    }
+    .sidebar { width: var(--sidebar-width); }
+    .sidebar ul li a { font-size: 14px; line-height: 1.5; }
+    .app-sub-sidebar li::before { content: ''; }
+    @media screen and (max-width: 768px) {
+      .markdown-section { padding: 16px 14px 90px; font-size: 15.5px; }
+      .markdown-section table th, .markdown-section table td { white-space: normal; }
+      .sidebar { width: 280px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">加载中…</div>
+
+  <script>
+    window.$docsify = {
+      name: '大数据数仓学习库',
+      repo: 'unluckyhope/bigdata-warehouse-notes',
+      homepage: 'README.md',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      maxLevel: 3,
+      auto2top: true,
+      autoHeader: false,
+      relativePath: true,
+      noEmoji: false,
+      // 无论进到哪一层，侧边栏都用根目录那一份
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+        '/.*/_navbar.md': '/_navbar.md'
+      },
+      search: {
+        placeholder: '搜索笔记（如 数据倾斜、watermark、拉链表）',
+        noData: '没有找到相关内容',
+        depth: 3
+      },
+      copyCode: {
+        buttonText: '复制',
+        errorText: '复制失败',
+        successText: '已复制'
+      },
+      pagination: {
+        previousText: '上一篇',
+        nextText: '下一篇',
+        crossChapter: true
+      },
+      themeColor: '#3f7ad6',
+      // 外链新窗口打开
+      plugins: [
+        function (hook) {
+          hook.doneEach(function () {
+            document.querySelectorAll('.markdown-section a[href^="http"]').forEach(function (a) {
+              a.setAttribute('target', '_blank');
+              a.setAttribute('rel', 'noopener');
+            });
+          });
+        }
+      ]
+    };
+  </script>
+
+  <script src="assets/docsify/docsify.min.js"></script>
+  <script src="assets/docsify/search.min.js"></script>
+  <script src="assets/docsify/docsify-copy-code.min.js"></script>
+  <script src="assets/docsify/docsify-pagination.min.js"></script>
+</body>
+</html>
