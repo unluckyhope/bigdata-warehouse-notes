@@ -50,6 +50,9 @@
       /* 表格保持 nowrap + 横向滚动，避免列被压成竖排文字 */
       .markdown-section table { font-size: 14px; }
       .markdown-section table th, .markdown-section table td { white-space: nowrap; padding: 8px 10px; }
+      /* 首页模块表：窄屏隐藏「内容速览」列，保证模块名/篇数/状态一屏可见 */
+      .markdown-section.page-home table th:nth-child(3),
+      .markdown-section.page-home table td:nth-child(3) { display: none; }
       .sidebar { width: 280px; }
     }
   </style>
@@ -110,13 +113,18 @@
             return md;
           });
         },
-        // 外链新窗口打开
+        // 外链新窗口打开 + 标记首页（用于首页表格的窄屏样式）
         function (hook) {
           hook.doneEach(function () {
             document.querySelectorAll('.markdown-section a[href^="http"]').forEach(function (a) {
               a.setAttribute('target', '_blank');
               a.setAttribute('rel', 'noopener');
             });
+            var sec = document.querySelector('.markdown-section');
+            if (sec) {
+              var h = location.hash.replace(/^#/, '').replace(/\/$/, '');
+              sec.classList.toggle('page-home', h === '' || h === '/README.md' || h === '/README');
+            }
           });
         }
       ]
