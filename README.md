@@ -8,17 +8,19 @@
 
 ## 模块目录
 
-| # | 模块 | 内容 | 篇数 | 状态 | 入口 |
-| --- | --- | --- | --- | --- | --- |
-| 01 | Hive & Spark SQL | 类型与 NULL、内置函数、执行顺序、Join、聚合、窗口、分区、排序、UDF、增量合并、小文件 | 13 | ✅ 已完成 | [进入](01%20%E6%A8%A1%E5%9D%971%20Hive%26Spark%20SQL/00_%E6%A8%A1%E5%9D%971%E5%AF%BC%E8%88%AA.md) |
-| 02 | 离线数仓维度建模 | 分层、四步法、星型/雪花、事实表、SCD、拉链表、总线矩阵、指标口径、电商实战 | 12 | ✅ 已完成 | [进入](02%20%E6%A8%A1%E5%9D%972%20%E7%A6%BB%E7%BA%BF%E6%95%B0%E4%BB%93%E7%BB%B4%E5%BA%A6%E5%BB%BA%E6%A8%A1/00_%E6%A8%A1%E5%9D%972%E5%AF%BC%E8%88%AA.md) |
-| 03 | Spark 调优、数据质量与血缘 | 执行模型、shuffle、Join 策略、数据倾斜、小文件、AQE、内存、慢任务定位、质量规则、血缘 | 12 | 🚧 大纲就绪 | [进入](03%20%E6%A8%A1%E5%9D%973%20Spark%E8%B0%83%E4%BC%98%E3%80%81%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E8%A1%80%E7%BC%98/00_%E6%A8%A1%E5%9D%973%E5%AF%BC%E8%88%AA.md) |
-| 04 | OLAP 引擎 | 选型全景、ClickHouse、Doris、StarRocks、Trino、Kylin、Druid、表设计与并发 | 11 | 🚧 大纲就绪 | [进入](04%20%E6%A8%A1%E5%9D%974%20OLAP%E5%BC%95%E6%93%8E/00_%E6%A8%A1%E5%9D%974%E5%AF%BC%E8%88%AA.md) |
-| 05 | 湖仓一体 Lakehouse | Iceberg 元数据、隐藏分区、Hudi COW/MOR、Delta、Paimon、Catalog、Compaction、增量读 | 11 | 🚧 大纲就绪 | [进入](05%20%E6%A8%A1%E5%9D%975%20%E6%B9%96%E4%BB%93%E4%B8%80%E4%BD%93Lakehouse/00_%E6%A8%A1%E5%9D%975%E5%AF%BC%E8%88%AA.md) |
-| 06 | 流批一体 Flink 实时 | 运行时、Watermark、窗口、状态、Checkpoint、Exactly-Once、维表 Join、反压、实时分层 | 12 | 🚧 大纲就绪 | [进入](06%20%E6%A8%A1%E5%9D%976%20%E6%B5%81%E6%89%B9%E4%B8%80%E4%BD%93Flink%E5%AE%9E%E6%97%B6/00_%E6%A8%A1%E5%9D%976%E5%AF%BC%E8%88%AA.md) |
-| 07 | 数据工程 & Modern Data Stack | 调度、dbt、数据契约、质量框架、元数据血缘、指标平台、成本治理、DataOps | 12 | 🚧 大纲就绪 | [进入](07%20%E6%A8%A1%E5%9D%977%20%E6%95%B0%E6%8D%AE%E5%B7%A5%E7%A8%8B%20%26%20Modern%20Data%20Stack/00_%E6%A8%A1%E5%9D%977%E5%AF%BC%E8%88%AA.md) |
-| 08 | AI × 数据开发（Data Agent / RAG） | LLM 基础、Text2SQL 路线、语义层、RAG 切分与召回、Agent 规划、评测与幻觉控制 | 11 | 🚧 大纲就绪 | [进入](08%20%E6%A8%A1%E5%9D%978%20AI%20%C3%97%20%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%20Data%20Agent%20RAG/00_%E6%A8%A1%E5%9D%978%E5%AF%BC%E8%88%AA.md) |
-| 09 | 拓展选修前沿 | 向量库、实时湖仓、云原生、Data Fabric、隐私计算、特征平台、LLM+BI、面试专题 | 9 | 🚧 大纲就绪 | [进入](09%20%E6%A8%A1%E5%9D%979%20%E6%8B%93%E5%B1%95%E9%80%89%E4%BF%AE%E5%89%8D%E6%B2%BF/00_%E6%A8%A1%E5%9D%979%E5%AF%BC%E8%88%AA.md) |
+> 点模块名进入该模块导航。
+
+| # | 模块 | 内容速览 | 篇数 | 状态 |
+| --- | --- | --- | --- | --- |
+| 01 | [Hive & Spark SQL](01%20%E6%A8%A1%E5%9D%971%20Hive%26Spark%20SQL/00_%E6%A8%A1%E5%9D%971%E5%AF%BC%E8%88%AA.md) | 类型/NULL、函数、Join、窗口、分区、UDF | 13 | ✅ 已完成 |
+| 02 | [离线数仓维度建模](02%20%E6%A8%A1%E5%9D%972%20%E7%A6%BB%E7%BA%BF%E6%95%B0%E4%BB%93%E7%BB%B4%E5%BA%A6%E5%BB%BA%E6%A8%A1/00_%E6%A8%A1%E5%9D%972%E5%AF%BC%E8%88%AA.md) | 分层、四步法、星型/雪花、SCD、拉链表 | 12 | ✅ 已完成 |
+| 03 | [Spark 调优、数据质量与血缘](03%20%E6%A8%A1%E5%9D%973%20Spark%E8%B0%83%E4%BC%98%E3%80%81%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E8%A1%80%E7%BC%98/00_%E6%A8%A1%E5%9D%973%E5%AF%BC%E8%88%AA.md) | 执行模型、shuffle、倾斜、AQE、质量血缘 | 12 | 🚧 进行中 |
+| 04 | [OLAP 引擎](04%20%E6%A8%A1%E5%9D%974%20OLAP%E5%BC%95%E6%93%8E/00_%E6%A8%A1%E5%9D%974%E5%AF%BC%E8%88%AA.md) | 选型、ClickHouse、Doris、StarRocks | 11 | 🚧 大纲就绪 |
+| 05 | [湖仓一体 Lakehouse](05%20%E6%A8%A1%E5%9D%975%20%E6%B9%96%E4%BB%93%E4%B8%80%E4%BD%93Lakehouse/00_%E6%A8%A1%E5%9D%975%E5%AF%BC%E8%88%AA.md) | Iceberg、Hudi、Delta、Paimon、Compaction | 11 | 🚧 大纲就绪 |
+| 06 | [流批一体 Flink 实时](06%20%E6%A8%A1%E5%9D%976%20%E6%B5%81%E6%89%B9%E4%B8%80%E4%BD%93Flink%E5%AE%9E%E6%97%B6/00_%E6%A8%A1%E5%9D%976%E5%AF%BC%E8%88%AA.md) | Watermark、状态、Checkpoint、维表 Join | 12 | 🚧 大纲就绪 |
+| 07 | [数据工程 & Modern Data Stack](07%20%E6%A8%A1%E5%9D%977%20%E6%95%B0%E6%8D%AE%E5%B7%A5%E7%A8%8B%20%26%20Modern%20Data%20Stack/00_%E6%A8%A1%E5%9D%977%E5%AF%BC%E8%88%AA.md) | 调度、dbt、契约、血缘、指标平台、成本 | 12 | 🚧 大纲就绪 |
+| 08 | [AI × 数据开发（Data Agent / RAG）](08%20%E6%A8%A1%E5%9D%978%20AI%20%C3%97%20%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%20Data%20Agent%20RAG/00_%E6%A8%A1%E5%9D%978%E5%AF%BC%E8%88%AA.md) | Text2SQL、语义层、RAG、Agent、评测 | 11 | 🚧 大纲就绪 |
+| 09 | [拓展选修前沿](09%20%E6%A8%A1%E5%9D%979%20%E6%8B%93%E5%B1%95%E9%80%89%E4%BF%AE%E5%89%8D%E6%B2%BF/00_%E6%A8%A1%E5%9D%979%E5%AF%BC%E8%88%AA.md) | 向量库、实时湖仓、云原生、特征平台、面试 | 9 | 🚧 大纲就绪 |
 
 ## 三个索引
 
@@ -30,9 +32,12 @@
 
 ## 怎么读
 
-**手机 / 网页**：直接点上面的表格进入模块导航，再点小节标题。所有链接都是标准 Markdown 链接，跳转正常。
+**手机 / 网页**：直接点上面的模块名进入模块导航，再点小节标题。所有链接都是标准 Markdown 链接，跳转正常。
 
-**本地（推荐，功能最全）**：
+**文档站（推荐手机使用）**：https://unluckyhope.github.io/bigdata-warehouse-notes/
+带侧边栏、全文搜索、代码一键复制，手机上体验接近 App。
+
+**本地（功能最全）**：
 
 ```bash
 git clone https://github.com/unluckyhope/bigdata-warehouse-notes.git

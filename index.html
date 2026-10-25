@@ -47,7 +47,9 @@
     .app-sub-sidebar li::before { content: ''; }
     @media screen and (max-width: 768px) {
       .markdown-section { padding: 16px 14px 90px; font-size: 15.5px; }
-      .markdown-section table th, .markdown-section table td { white-space: normal; }
+      /* 表格保持 nowrap + 横向滚动，避免列被压成竖排文字 */
+      .markdown-section table { font-size: 14px; }
+      .markdown-section table th, .markdown-section table td { white-space: nowrap; padding: 8px 10px; }
       .sidebar { width: 280px; }
     }
   </style>
@@ -88,8 +90,27 @@
         crossChapter: true
       },
       themeColor: '#3f7ad6',
-      // 外链新窗口打开
       plugins: [
+        // 1) 去掉 YAML frontmatter；2) 把 Obsidian callout 语法转成带图标的加粗标题
+        function (hook) {
+          var ICONS = {
+            info: '📘', tip: '💡', warning: '⚠️', note: '📝', abstract: '📌',
+            summary: '📌', important: '❗', caution: '⚠️', danger: '🚨',
+            success: '✅', question: '❓', quote: '💬', example: '🧪',
+            failure: '❌', bug: '🐛', todo: '📋', attention: '⚠️', faq: '❓'
+          };
+          hook.beforeEach(function (md) {
+            // 去掉开头的 YAML frontmatter
+            md = md.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
+            // > [!info] 标题  →  > **📘 标题**
+            md = md.replace(/^>\s*\[!(\w+)\][+-]?\s*(.*)$/gm, function (m, type, rest) {
+              var icon = ICONS[type.toLowerCase()] || '📌';
+              return '> **' + icon + (rest ? ' ' + rest : '') + '**';
+            });
+            return md;
+          });
+        },
+        // 外链新窗口打开
         function (hook) {
           hook.doneEach(function () {
             document.querySelectorAll('.markdown-section a[href^="http"]').forEach(function (a) {
